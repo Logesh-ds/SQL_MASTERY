@@ -5,14 +5,65 @@
     including creating, modifying, and deleting tables.
 
    Table of Contents:
-     1. CREATE - Creating Tables
+    
+    1. CREATE - Creating databases & Tables
      2. ALTER - Modifying Table Structure
      3. DROP - Removing Tables
 
 */
 
 
---  CREATE
+--  CREATEING DATABASE
+
+
+-- Database Creation and Table Setup Script
+
+USE master;
+
+
+-- Dropping the database if already exists.
+
+DROP DATABASE IF EXISTS MyDB;
+
+
+-- Create the 'MyDB' database
+
+CREATE DATABASE  MyDB ; 
+
+
+USE MyDB;
+
+
+-- Table: customers
+
+
+DROP TABLE IF EXISTS customers;
+
+
+CREATE TABLE customers (
+    id INT NOT NULL,
+    first_name  VARCHAR(50) NOT NULL,
+    country     VARCHAR(50),
+    score       INT,
+    CONSTRAINT PK_customers PRIMARY KEY (id)
+);
+
+
+
+-- Table: orders
+
+
+DROP TABLE IF EXISTS orders;
+
+
+CREATE TABLE orders (
+    order_id    INT NOT NULL,
+    customer_id INT NOT NULL,
+    order_date  DATE,
+    sales    INT,
+    CONSTRAINT PK_orders PRIMARY KEY (order_id)
+);
+
 
 /* Create a new table called persons with columns */
 

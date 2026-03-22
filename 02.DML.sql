@@ -16,6 +16,15 @@
 
 /* #1 Method: Manual INSERT using VALUES */
 
+
+INSERT INTO customers (id, first_name, country, score) VALUES
+    (1, 'Maria',     'Germany', 350),
+    (2, ' John',     'USA',     900),
+    (3, 'Georg',   'UK',      750),
+    (4, 'Martin', 'Germany', 500),
+    (5, 'Peter',   'USA',     0);
+
+
 -- Insert new records into the customers table
 
 INSERT INTO customers (id, first_name, country, score)
@@ -58,25 +67,36 @@ VALUES
     (10, 'Sahra');
 
 
+-- Inserting data into orders data.
+
+INSERT INTO orders (order_id, customer_id, order_date, sales) 
+VALUES
+    (1001, 1, '2021-01-11', 35),
+    (1002, 2, '2021-04-05', 15),
+    (1003, 3, '2021-06-18', 20),
+    (1004, 6, '2021-08-31', 10);
+
+
+
 -- UPDATE
 
 -- Change the score of customer with ID 6 to 0
 
 UPDATE customers
-SET score  0
-WHERE id  6
+SET score = 0
+WHERE id = 6
 
 
 -- Change the score of customer with ID 10 to 0 and update the country to 'UK'
 
 UPDATE customers
-SET score  0,
-    country  'UK'
-WHERE id  10
+SET score = 0,
+    country = 'UK'
+WHERE id = 10
 
 -- Update all customers with a NULL score by setting their score to 0
 UPDATE customers
-SET score  0
+SET score = 0
 WHERE score IS NULL
 
 -- Verify the update
@@ -88,17 +108,23 @@ WHERE score IS NULL
   -- DELETE
 
 -- Select customers with an ID greater than 5 before deleting
+
 SELECT *
 FROM customers
 WHERE id > 5
 
+
 -- Delete all customers with an ID greater than 5
+
 DELETE FROM customers
 WHERE id > 5
 
+
 -- Delete all data from the persons table
+
 DELETE FROM persons
 
+
 -- Faster method to delete all rows, especially useful for large tables
+
 TRUNCATE TABLE persons
-h
