@@ -6,7 +6,7 @@
 
    Table of Contents:
     
-    1. CREATE - Creating databases & Tables
+     1. CREATE - Creating databases & Tables
      2. ALTER - Modifying Table Structure
      3. DROP - Removing Tables
 
