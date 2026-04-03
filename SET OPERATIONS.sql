@@ -24,10 +24,12 @@
 
 SELECT
     FirstName,
-    LastName,
+    LastName
     Country
 FROM Sales.Customers
+
 UNION
+
 SELECT
     FirstName,
     LastName
@@ -42,7 +44,9 @@ SELECT
     CustomerID,
     LastName
 FROM Sales.Customers
+
 UNION
+
 SELECT
     FirstName,
     LastName
@@ -88,7 +92,9 @@ SELECT
     FirstName,
     LastName
 FROM Sales.Customers
+
 UNION
+
 SELECT
     LastName,
     FirstName
@@ -113,7 +119,8 @@ FROM Sales.Employees;
 
 
 /* TASK 2: 
-   Combine the data from Employees and Customers into one table, including duplicates, using UNION ALL 
+   Combine the data from Employees and Customers into one table, including duplicates,
+   using UNION ALL 
 */
 
 SELECT
